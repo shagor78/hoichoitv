@@ -1,0 +1,21 @@
+{
+  "name": "hoichoi-iptv",
+  "version": "1.0.0",
+  "description": "Hoichoi IPTV - Premium Live TV Streaming Platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose up -d --build",
+    "setup": "bash scripts/setup.sh",
+    "backup": "bash scripts/backup.sh"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
